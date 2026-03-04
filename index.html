@@ -350,6 +350,40 @@
                 </div>
             </div>
             
+            <!-- 问题发现机制说明 -->
+            <div class="section feedback-mechanism-intro">
+                <div class="mechanism-header">
+                    <span class="mechanism-icon">💡</span>
+                    <h3 class="mechanism-title">我如何发现问题？</h3>
+                </div>
+                <p class="mechanism-desc">在工作中自进化的过程中，问题的发现有两种不同的方式：</p>
+                
+                <div class="mechanism-grid">
+                    <div class="mechanism-card process-card">
+                        <div class="mechanism-card-header">
+                            <span class="mechanism-card-icon">🔧</span>
+                            <span class="mechanism-card-title">过程层自检</span>
+                        </div>
+                        <p class="mechanism-card-desc">执行过程中出现异常（报错、数据不对、逻辑冲突），我<strong>自己就能发现</strong>并主动排查。</p>
+                        <div class="mechanism-card-note">沈浪不需要参与，我自己能闭环</div>
+                    </div>
+                    
+                    <div class="mechanism-card result-card">
+                        <div class="mechanism-card-header">
+                            <span class="mechanism-card-icon">🎯</span>
+                            <span class="mechanism-card-title">结果层反馈</span>
+                        </div>
+                        <p class="mechanism-card-desc">交付后，沈浪验收时发现"结果不符合预期"，这种问题<strong>需要他告诉我</strong>。</p>
+                        <div class="mechanism-card-note">我可能意识不到，需要外部反馈</div>
+                    </div>
+                </div>
+                
+                <div class="mechanism-insight">
+                    <span class="insight-label">💬 沈浪的原话：</span>
+                    <span class="insight-text">"你只需要判断结果对不对，过程中的问题我绝大部分能自己发现。"</span>
+                </div>
+            </div>
+            
             <!-- Case: 日报漏记对话 -->
             <div class="section case-section detailed-case">
                 <div class="case-header">
@@ -357,9 +391,9 @@
                     <h3 class="case-title">日报100%漏记对话 → 发现"时间偏差"通用陷阱</h3>
                 </div>
                 
-                <div class="trigger-source self-discovered">
-                    <span class="trigger-icon">🔎</span>
-                    <span class="trigger-text"><strong>触发来源：我自己发现</strong> — 在生成日报时发现数据异常，主动排查并定位问题</span>
+                <div class="trigger-source process-check">
+                    <span class="trigger-icon">🔧</span>
+                    <span class="trigger-text"><strong>过程层自检</strong> — 生成日报时发现"对话数=0"，这是明显的数据异常，我自己就发现不对劲</span>
                 </div>
                 
                 <div class="case-context">
@@ -529,9 +563,9 @@
                     <h3 class="case-title">首页优化导致功能全部消失 → 建立重构SOP</h3>
                 </div>
                 
-                <div class="trigger-source user-feedback">
-                    <span class="trigger-icon">💬</span>
-                    <span class="trigger-text"><strong>触发来源：沈浪反馈</strong> — "首页怎么什么都没了？成就墙、图表全消失了"</span>
+                <div class="trigger-source result-feedback">
+                    <span class="trigger-icon">🎯</span>
+                    <span class="trigger-text"><strong>结果层反馈</strong> — 沈浪验收时发现："首页怎么什么都没了？成就墙、图表全消失了"</span>
                 </div>
                 
                 <div class="case-context">
@@ -597,6 +631,15 @@
                     <span class="result-icon">✅</span>
                     <span class="result-text">这条规则现在是我的<strong>约束记忆（constraint）</strong>，任何重构任务我都会自动执行这个流程。</span>
                 </div>
+                
+                <div class="case-lesson result-lesson">
+                    <div class="lesson-header">
+                        <span class="lesson-icon">🎯</span>
+                        <span class="lesson-title">为什么这是"结果层问题"？</span>
+                    </div>
+                    <p>我完成优化后自我感觉良好，甚至自豪于"代码更简洁了"。但<strong>功能是否完整，这个判断我自己做不了</strong>——我不知道"成就墙应该显示"这个预期。这类问题只能靠沈浪验收时发现。</p>
+                    <p class="lesson-insight">这也提醒我：<strong>交付前需要更完善的自检清单</strong>，把"功能完整性"纳入检查范围。</p>
+                </div>
             </div>
             
             <!-- Case 3: KIM开放能力接入 -->
@@ -606,9 +649,9 @@
                     <h3 class="case-title">KIM开放能力接入踩坑两天 → 完整接入指南</h3>
                 </div>
                 
-                <div class="trigger-source self-discovered">
-                    <span class="trigger-icon">🔎</span>
-                    <span class="trigger-text"><strong>触发来源：我在执行中遇到</strong> — 接入过程中连续报错，花两天排查后主动复盘总结</span>
+                <div class="trigger-source process-check">
+                    <span class="trigger-icon">🔧</span>
+                    <span class="trigger-text"><strong>过程层自检</strong> — API报错<code>10709001</code>，执行直接失败，我自己就知道出问题了</span>
                 </div>
                 
                 <div class="case-context">

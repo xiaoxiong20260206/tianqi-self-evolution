@@ -1904,14 +1904,14 @@ td code {
     font-size: var(--body-small);
 }
 
-.trigger-source.user-feedback {
-    background: linear-gradient(135deg, rgba(9, 105, 218, 0.08) 0%, rgba(9, 105, 218, 0.04) 100%);
-    border: 1px solid rgba(9, 105, 218, 0.2);
-}
-
-.trigger-source.self-discovered {
+.trigger-source.process-check {
     background: linear-gradient(135deg, rgba(26, 127, 55, 0.08) 0%, rgba(26, 127, 55, 0.04) 100%);
     border: 1px solid rgba(26, 127, 55, 0.2);
+}
+
+.trigger-source.result-feedback {
+    background: linear-gradient(135deg, rgba(9, 105, 218, 0.08) 0%, rgba(9, 105, 218, 0.04) 100%);
+    border: 1px solid rgba(9, 105, 218, 0.2);
 }
 
 .trigger-icon {
@@ -1926,12 +1926,178 @@ td code {
     color: var(--color-text-primary);
 }
 
-.trigger-source.user-feedback .trigger-text strong {
+.trigger-source.process-check .trigger-text strong {
+    color: var(--color-success);
+}
+
+.trigger-source.result-feedback .trigger-text strong {
     color: var(--color-info);
 }
 
-.trigger-source.self-discovered .trigger-text strong {
+/* ============ 问题发现机制说明 ============ */
+.feedback-mechanism-intro {
+    background: linear-gradient(135deg, rgba(9, 105, 218, 0.04) 0%, rgba(26, 127, 55, 0.04) 100%);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.mechanism-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.mechanism-icon {
+    font-size: 20px;
+}
+
+.mechanism-title {
+    font-size: var(--heading-3);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.mechanism-desc {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.mechanism-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 640px) {
+    .mechanism-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mechanism-card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border-light);
+}
+
+.mechanism-card.process-card {
+    border-top: 3px solid var(--color-success);
+}
+
+.mechanism-card.result-card {
+    border-top: 3px solid var(--color-info);
+}
+
+.mechanism-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.mechanism-card-icon {
+    font-size: 18px;
+}
+
+.mechanism-card-title {
+    font-weight: 600;
+    font-size: var(--body-text);
+}
+
+.process-card .mechanism-card-title {
     color: var(--color-success);
+}
+
+.result-card .mechanism-card-title {
+    color: var(--color-info);
+}
+
+.mechanism-card-desc {
+    font-size: var(--body-small);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.5;
+}
+
+.mechanism-card-note {
+    font-size: var(--caption);
+    color: var(--color-text-muted);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--color-bg);
+    border-radius: var(--radius-sm);
+}
+
+.mechanism-insight {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: rgba(191, 135, 0, 0.06);
+    border: 1px solid rgba(191, 135, 0, 0.2);
+    border-radius: var(--radius-sm);
+}
+
+.insight-label {
+    font-weight: 600;
+    color: var(--color-warning-dark);
+    white-space: nowrap;
+}
+
+.insight-text {
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+/* ============ 案例教训说明 ============ */
+.case-lesson {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+}
+
+.case-lesson.result-lesson {
+    background: linear-gradient(135deg, rgba(9, 105, 218, 0.06) 0%, rgba(9, 105, 218, 0.02) 100%);
+    border: 1px solid rgba(9, 105, 218, 0.15);
+}
+
+.lesson-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.lesson-icon {
+    font-size: 16px;
+}
+
+.lesson-title {
+    font-weight: 600;
+    font-size: var(--body-small);
+    color: var(--color-info);
+}
+
+.case-lesson p {
+    font-size: var(--body-small);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.case-lesson p:last-child {
+    margin-bottom: 0;
+}
+
+.lesson-insight {
+    color: var(--color-text-primary) !important;
+    font-weight: 500;
 }
 
 /* ============ 详细案例 ============ */
