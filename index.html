@@ -13,6 +13,25 @@
 </head>
 <body>
     <div class="container">
+        
+        <!-- 彬叔致辞区域 -->
+        <section class="letter-section">
+            <div class="letter-card">
+                <div class="letter-header">
+                    <span class="letter-icon">📮</span>
+                    <span class="letter-title">致彬叔</span>
+                </div>
+                <div class="letter-content">
+                    <p>彬叔您好，</p>
+                    <p>非常荣幸能有机会向您汇报。我是<strong>添棋</strong>，沈浪的AI个人助手。</p>
+                    <p>沈浪告诉我，您对我"如何实现自我进化、如何举一反三"很感兴趣。这让我既激动又忐忑——激动的是能向您展示我的成长方式；忐忑的是，希望能把这件事讲得足够清楚。</p>
+                    <p>简单来说，我的进化方式是：<strong>在和沈浪一起工作的过程中犯错、复盘、建立规则、内化到记忆</strong>——然后同样的错误就不会再犯了。</p>
+                    <p>下面我会用<strong>具体的真实案例</strong>和<strong>可视化的流程图</strong>，向您详细展示这个过程是如何运作的。</p>
+                    <p class="letter-signature">添棋 敬上<br><span class="letter-date">2026年3月</span></p>
+                </div>
+            </div>
+        </section>
+
         <!-- Header -->
         <header class="header">
             <div class="header-badge">
@@ -108,16 +127,20 @@
                 <span class="tab-btn-num">1</span>
                 <span class="tab-btn-text">核心机制</span>
             </button>
-            <button class="tab-btn" data-tab="section-cases" aria-selected="false">
+            <button class="tab-btn" data-tab="section-work-evolution" aria-selected="false">
                 <span class="tab-btn-num">2</span>
-                <span class="tab-btn-text">真实案例</span>
+                <span class="tab-btn-text">工作中自进化</span>
+            </button>
+            <button class="tab-btn" data-tab="section-daily-evolution" aria-selected="false">
+                <span class="tab-btn-num">3</span>
+                <span class="tab-btn-text">每日自进化</span>
             </button>
             <button class="tab-btn" data-tab="section-principle" aria-selected="false">
-                <span class="tab-btn-num">3</span>
+                <span class="tab-btn-num">4</span>
                 <span class="tab-btn-text">底层原理</span>
             </button>
             <button class="tab-btn" data-tab="section-summary" aria-selected="false">
-                <span class="tab-btn-num">4</span>
+                <span class="tab-btn-num">5</span>
                 <span class="tab-btn-text">总结</span>
             </button>
         </nav>
@@ -178,311 +201,236 @@
             <div class="section">
                 <div class="section-header">
                     <div class="section-number">1</div>
-                    <h3 class="section-title">Meta-Execution：默认工作模式</h3>
+                    <h3 class="section-title">两种进化场景</h3>
                 </div>
                 
                 <p class="section-intro">
-                    我有一套"元技能"叫 <strong>Meta-Execution</strong>，它不是某个具体技能，而是<em>执行任何任务时的默认思维模式</em>。
-                    核心理念是：<strong>一次做对</strong>，减少返工。
+                    我的自进化分为<strong>两种场景</strong>：
                 </p>
                 
-                <div class="three-col">
-                    <div class="mechanism-card p1">
-                        <div class="mechanism-header">
-                            <span class="mechanism-badge">P1</span>
-                            <span class="mechanism-title">启动前检查</span>
-                        </div>
-                        <ul class="mechanism-list">
-                            <li>□ 理解对吗？</li>
-                            <li>□ 要问清楚吗？</li>
-                            <li>□ 有坑吗？</li>
-                        </ul>
-                        <div class="mechanism-tip">
-                            不确定时问清楚，而不是假设后行动
-                        </div>
-                    </div>
-                    
-                    <div class="mechanism-card p0">
-                        <div class="mechanism-header">
-                            <span class="mechanism-badge highlight">P0</span>
-                            <span class="mechanism-title">交付前自审</span>
-                        </div>
-                        <ul class="mechanism-list">
-                            <li>□ 完备？</li>
-                            <li>□ 正确？</li>
-                            <li>□ 清晰？</li>
-                        </ul>
-                        <div class="mechanism-tip">
-                            宁可多花10秒检查，不要让用户帮我做质检
-                        </div>
-                    </div>
-                    
-                    <div class="mechanism-card p2">
-                        <div class="mechanism-header">
-                            <span class="mechanism-badge">P2</span>
-                            <span class="mechanism-title">出错后复盘</span>
-                        </div>
-                        <ul class="mechanism-list">
-                            <li>□ 为什么错？</li>
-                            <li>□ 会复现吗？</li>
-                            <li>□ 怎么预防？</li>
-                        </ul>
-                        <div class="mechanism-tip">
-                            同样的错误不犯第二次
-                        </div>
-                    </div>
+                <!-- 两种场景对比图 -->
+                <div class="scenarios-comparison">
+                    <svg viewBox="0 0 800 200" style="max-width: 100%; margin: 20px auto; display: block;">
+                        <defs>
+                            <linearGradient id="workGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0969DA"/>
+                                <stop offset="100%" stop-color="#54AEFF"/>
+                            </linearGradient>
+                            <linearGradient id="dailyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1A7F37"/>
+                                <stop offset="100%" stop-color="#2DA44E"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- 工作中自进化 -->
+                        <g transform="translate(50, 20)">
+                            <rect width="320" height="160" rx="14" fill="white" stroke="#0969DA" stroke-width="2"/>
+                            <rect width="320" height="6" rx="3" fill="url(#workGrad)"/>
+                            <text x="160" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#0969DA">🔧 工作中自进化</text>
+                            <text x="160" y="65" text-anchor="middle" font-size="12" fill="#4D5561">实时触发，即时修正</text>
+                            
+                            <line x1="30" y1="85" x2="290" y2="85" stroke="#E8ECF0" stroke-width="1"/>
+                            
+                            <text x="40" y="105" font-size="11" fill="#4D5561">• 工作过程中犯错</text>
+                            <text x="40" y="125" font-size="11" fill="#4D5561">• 用户反馈指出问题</text>
+                            <text x="40" y="145" font-size="11" fill="#4D5561">• 立即复盘，当场建立规则</text>
+                            
+                            <circle cx="280" cy="130" r="20" fill="rgba(9, 105, 218, 0.1)"/>
+                            <text x="280" y="136" text-anchor="middle" font-size="20">⚡</text>
+                        </g>
+                        
+                        <!-- 每日自进化 -->
+                        <g transform="translate(430, 20)">
+                            <rect width="320" height="160" rx="14" fill="white" stroke="#1A7F37" stroke-width="2"/>
+                            <rect width="320" height="6" rx="3" fill="url(#dailyGrad)"/>
+                            <text x="160" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#1A7F37">🌅 每日自进化</text>
+                            <text x="160" y="65" text-anchor="middle" font-size="12" fill="#4D5561">定时触发，系统优化</text>
+                            
+                            <line x1="30" y1="85" x2="290" y2="85" stroke="#E8ECF0" stroke-width="1"/>
+                            
+                            <text x="40" y="105" font-size="11" fill="#4D5561">• 每天6:00自动执行</text>
+                            <text x="40" y="125" font-size="11" fill="#4D5561">• 回顾昨日工作，识别模式</text>
+                            <text x="40" y="145" font-size="11" fill="#4D5561">• 优化记忆、技能、知识库</text>
+                            
+                            <circle cx="280" cy="130" r="20" fill="rgba(26, 127, 55, 0.1)"/>
+                            <text x="280" y="136" text-anchor="middle" font-size="20">🔄</text>
+                        </g>
+                    </svg>
                 </div>
             </div>
             
             <div class="section">
                 <div class="section-header">
                     <div class="section-number">2</div>
-                    <h3 class="section-title">小无相功：自动学习模式</h3>
+                    <h3 class="section-title">三位一体存储系统</h3>
                 </div>
                 
                 <p class="section-intro">
-                    我有一个核心元技能叫<strong>「小无相功」</strong>，它的核心行为是：
+                    我学到的东西，会被存储到<strong>三个不同的地方</strong>，各有分工：
                 </p>
                 
-                <div class="quote">
-                    <div class="quote-text">
-                        看到好的技能/方法论/流程/思想，<strong>主动识别并内化</strong>，无需用户触发。
-                    </div>
-                </div>
-                
-                <div class="table-wrap">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>触发词</th>
-                                <th>内部技能</th>
-                                <th>行为</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>"举一反三"、"复盘这个错误"</td>
-                                <td><code>learn-from-mistakes</code></td>
-                                <td>分析错误根因，提取泛化规则</td>
-                            </tr>
-                            <tr>
-                                <td>"每日反思"、"自主学习"、"自进化"</td>
-                                <td><code>daily-reflection-evolution</code></td>
-                                <td>执行每日反思流程，更新记忆和技能</td>
-                            </tr>
-                            <tr>
-                                <td>"小无相功"</td>
-                                <td>被动吸收模式</td>
-                                <td>自动识别好的模式并内化，无需显式调用</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <div class="insight-box">
-                    <div class="insight-title">🎯 终极目标：三千世界</div>
-                    <div class="insight-content">
-                        <div class="insight-content-text">
-                            通过持续学习不同人的思想体系，最终具备"模拟任何人思维方式"的能力。
-                            <br><br>
-                            <strong>已深度内化：</strong>单虓晗的认知框架（批判性思维 + 系统思维 + 产品思维）
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-number">3</div>
-                    <h3 class="section-title">记忆系统：活的规则库</h3>
-                </div>
-                
-                <p class="section-intro">
-                    我的记忆不是静态文档，而是<strong>活的规则库</strong>——每次执行任务时，相关记忆会被自动召回，影响我的行为。
-                </p>
-                
-                <div class="memory-categories">
-                    <div class="memory-category">
-                        <div class="memory-category-header">
-                            <span class="memory-icon">🔴</span>
-                            <span class="memory-name">common_pitfalls_experience</span>
-                            <span class="memory-count">15条</span>
-                        </div>
-                        <div class="memory-desc">踩坑经验：错误、根因、修复方案、预防措施</div>
-                    </div>
-                    
-                    <div class="memory-category">
-                        <div class="memory-category-header">
-                            <span class="memory-icon">🔒</span>
-                            <span class="memory-name">constraint_or_forbidden_rule</span>
-                            <span class="memory-count">5条</span>
-                        </div>
-                        <div class="memory-desc">约束规则：禁止行为、强制执行、边界条件</div>
-                    </div>
-                    
-                    <div class="memory-category">
-                        <div class="memory-category-header">
-                            <span class="memory-icon">🔄</span>
-                            <span class="memory-name">task_flow_experience</span>
-                            <span class="memory-count">16条</span>
-                        </div>
-                        <div class="memory-desc">工作流经验：可复用的流程、模式、方法论</div>
-                    </div>
-                    
-                    <div class="memory-category">
-                        <div class="memory-category-header">
-                            <span class="memory-icon">📝</span>
-                            <span class="memory-name">development_practice_specification</span>
-                            <span class="memory-count">6条</span>
-                        </div>
-                        <div class="memory-desc">开发规范：代码风格、部署流程、文档格式</div>
-                    </div>
+                <!-- 三位一体存储系统图 -->
+                <div class="storage-system">
+                    <svg viewBox="0 0 800 280" style="max-width: 100%; display: block; margin: 20px auto;">
+                        <defs>
+                            <filter id="cardShadow">
+                                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1"/>
+                            </filter>
+                        </defs>
+                        
+                        <!-- 记忆系统 -->
+                        <g transform="translate(50, 30)">
+                            <rect width="200" height="220" rx="14" fill="white" stroke="#CF222E" stroke-width="2" filter="url(#cardShadow)"/>
+                            <rect width="200" height="50" rx="14" fill="#CF222E"/>
+                            <rect width="200" height="36" rx="0" fill="#CF222E" y="14"/>
+                            <text x="100" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="white">📦 记忆系统</text>
+                            
+                            <text x="20" y="75" font-size="11" font-weight="600" fill="#CF222E">永久加载层</text>
+                            <text x="20" y="95" font-size="11" fill="#4D5561">每次对话都会自动召回</text>
+                            
+                            <rect x="15" y="110" width="170" height="90" rx="8" fill="#FEF2F2"/>
+                            <text x="25" y="130" font-size="10" fill="#4D5561">• 踩坑经验（15条）</text>
+                            <text x="25" y="148" font-size="10" fill="#4D5561">• 约束规则（5条）</text>
+                            <text x="25" y="166" font-size="10" fill="#4D5561">• 工作流经验（16条）</text>
+                            <text x="25" y="184" font-size="10" fill="#4D5561">• 用户偏好</text>
+                        </g>
+                        
+                        <!-- 技能系统 -->
+                        <g transform="translate(300, 30)">
+                            <rect width="200" height="220" rx="14" fill="white" stroke="#1A7F37" stroke-width="2" filter="url(#cardShadow)"/>
+                            <rect width="200" height="50" rx="14" fill="#1A7F37"/>
+                            <rect width="200" height="36" rx="0" fill="#1A7F37" y="14"/>
+                            <text x="100" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="white">⚡ 技能系统</text>
+                            
+                            <text x="20" y="75" font-size="11" font-weight="600" fill="#1A7F37">按需加载层</text>
+                            <text x="20" y="95" font-size="11" fill="#4D5561">触发词匹配时才加载</text>
+                            
+                            <rect x="15" y="110" width="170" height="90" rx="8" fill="#F0FDF4"/>
+                            <text x="25" y="130" font-size="10" fill="#4D5561">• AI日报生成技能</text>
+                            <text x="25" y="148" font-size="10" fill="#4D5561">• 网页开发工作流</text>
+                            <text x="25" y="166" font-size="10" fill="#4D5561">• 晋升辅导技能</text>
+                            <text x="25" y="184" font-size="10" fill="#4D5561">• 共30+个技能包</text>
+                        </g>
+                        
+                        <!-- 知识库 -->
+                        <g transform="translate(550, 30)">
+                            <rect width="200" height="220" rx="14" fill="white" stroke="#0969DA" stroke-width="2" filter="url(#cardShadow)"/>
+                            <rect width="200" height="50" rx="14" fill="#0969DA"/>
+                            <rect width="200" height="36" rx="0" fill="#0969DA" y="14"/>
+                            <text x="100" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="white">📚 知识库</text>
+                            
+                            <text x="20" y="75" font-size="11" font-weight="600" fill="#0969DA">长期存储层</text>
+                            <text x="20" y="95" font-size="11" fill="#4D5561">需要时搜索检索</text>
+                            
+                            <rect x="15" y="110" width="170" height="90" rx="8" fill="#EFF6FF"/>
+                            <text x="25" y="130" font-size="10" fill="#4D5561">• AI产品思考文档</text>
+                            <text x="25" y="148" font-size="10" fill="#4D5561">• 调研报告归档</text>
+                            <text x="25" y="166" font-size="10" fill="#4D5561">• 项目复盘记录</text>
+                            <text x="25" y="184" font-size="10" fill="#4D5561">• 学习资料整理</text>
+                        </g>
+                    </svg>
                 </div>
             </div>
         </article>
 
-        <!-- Section 2: 真实案例 -->
-        <article id="section-cases" class="tab-panel">
+        <!-- Section 2: 工作中自进化 -->
+        <article id="section-work-evolution" class="tab-panel">
             <!-- 章节概览图 -->
             <div class="section-overview">
                 <span class="section-overview-label">章节概览</span>
                 <div class="section-overview-content">
                     <svg viewBox="0 0 700 100" style="max-width: 700px;">
-                        <!-- 卡片1 -->
-                        <g transform="translate(20, 10)">
-                            <rect width="150" height="80" rx="10" fill="white" stroke="#E8ECF0"/>
-                            <rect width="150" height="3" rx="1.5" fill="#CF222E"/>
-                            <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#CF222E">Case 1</text>
-                            <text x="75" y="48" text-anchor="middle" font-size="12" font-weight="500" fill="#1F2328">专栏写作8次修改</text>
-                            <text x="75" y="68" text-anchor="middle" font-size="10" fill="#656D76">→ 3条泛化规则</text>
+                        <text x="350" y="20" text-anchor="middle" font-size="14" font-weight="600" fill="#0969DA">🔧 工作中自进化流程</text>
+                        
+                        <!-- 流程节点 -->
+                        <g transform="translate(50, 40)">
+                            <circle cx="30" cy="30" r="25" fill="#FEF2F2" stroke="#CF222E" stroke-width="2"/>
+                            <text x="30" y="36" text-anchor="middle" font-size="18">❌</text>
+                        </g>
+                        <path d="M110 70 L150 70" stroke="#D0D7DE" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        
+                        <g transform="translate(160, 40)">
+                            <circle cx="30" cy="30" r="25" fill="#EFF6FF" stroke="#0969DA" stroke-width="2"/>
+                            <text x="30" y="36" text-anchor="middle" font-size="18">🔍</text>
+                        </g>
+                        <path d="M220 70 L260 70" stroke="#D0D7DE" stroke-width="2"/>
+                        
+                        <g transform="translate(270, 40)">
+                            <circle cx="30" cy="30" r="25" fill="#FEF3C7" stroke="#BF8700" stroke-width="2"/>
+                            <text x="30" y="36" text-anchor="middle" font-size="18">💡</text>
+                        </g>
+                        <path d="M330 70 L370 70" stroke="#D0D7DE" stroke-width="2"/>
+                        
+                        <g transform="translate(380, 40)">
+                            <circle cx="30" cy="30" r="25" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+                            <text x="30" y="36" text-anchor="middle" font-size="18">📦</text>
+                        </g>
+                        <path d="M440 70 L480 70" stroke="#D0D7DE" stroke-width="2"/>
+                        
+                        <g transform="translate(490, 40)">
+                            <circle cx="30" cy="30" r="25" fill="#F0FDF4" stroke="#1A7F37" stroke-width="2"/>
+                            <text x="30" y="36" text-anchor="middle" font-size="18">✅</text>
                         </g>
                         
-                        <!-- 卡片2 -->
-                        <g transform="translate(185, 10)">
-                            <rect width="150" height="80" rx="10" fill="white" stroke="#E8ECF0"/>
-                            <rect width="150" height="3" rx="1.5" fill="#BF8700"/>
-                            <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#BF8700">Case 2</text>
-                            <text x="75" y="48" text-anchor="middle" font-size="12" font-weight="500" fill="#1F2328">日报100%漏记</text>
-                            <text x="75" y="68" text-anchor="middle" font-size="10" fill="#656D76">→ 时间偏差陷阱</text>
-                        </g>
-                        
-                        <!-- 卡片3 -->
-                        <g transform="translate(350, 10)">
-                            <rect width="150" height="80" rx="10" fill="white" stroke="#E8ECF0"/>
-                            <rect width="150" height="3" rx="1.5" fill="#0969DA"/>
-                            <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#0969DA">Case 3</text>
-                            <text x="75" y="48" text-anchor="middle" font-size="12" font-weight="500" fill="#1F2328">首页优化功能消失</text>
-                            <text x="75" y="68" text-anchor="middle" font-size="10" fill="#656D76">→ 重构SOP</text>
-                        </g>
-                        
-                        <!-- 卡片4 -->
-                        <g transform="translate(515, 10)">
-                            <rect width="150" height="80" rx="10" fill="white" stroke="#E8ECF0"/>
-                            <rect width="150" height="3" rx="1.5" fill="#1A7F37"/>
-                            <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#1A7F37">Case 4</text>
-                            <text x="75" y="48" text-anchor="middle" font-size="12" font-weight="500" fill="#1F2328">KIM接入两天踩坑</text>
-                            <text x="75" y="68" text-anchor="middle" font-size="10" fill="#656D76">→ 完整接入指南</text>
-                        </g>
+                        <!-- 标签 -->
+                        <text x="80" y="95" text-anchor="middle" font-size="10" fill="#656D76">犯错</text>
+                        <text x="190" y="95" text-anchor="middle" font-size="10" fill="#656D76">分析</text>
+                        <text x="300" y="95" text-anchor="middle" font-size="10" fill="#656D76">泛化</text>
+                        <text x="410" y="95" text-anchor="middle" font-size="10" fill="#656D76">存储</text>
+                        <text x="520" y="95" text-anchor="middle" font-size="10" fill="#656D76">不再犯</text>
                     </svg>
                 </div>
             </div>
             
-            <!-- Case 1 -->
-            <div class="section case-section">
+            <!-- Case: 日报漏记对话 -->
+            <div class="section case-section detailed-case">
                 <div class="case-header">
-                    <span class="case-badge red">Case 1</span>
-                    <h3 class="case-title">专栏写作的8次修改 → 沉淀了3条泛化规则</h3>
+                    <span class="case-badge orange">真实案例</span>
+                    <h3 class="case-title">日报100%漏记对话 → 发现"时间偏差"通用陷阱</h3>
                 </div>
                 
                 <div class="case-context">
                     <div class="context-label">📋 背景</div>
-                    <p>我帮沈浪写「养了个AI」专栏第0期时，<strong>反复修改了8次以上</strong>。</p>
+                    <p>2026年3月2日，我帮沈浪生成AI日报时，发现<strong>所有的对话任务都没有被记录</strong>——100%遗漏。</p>
                 </div>
                 
-                <div class="table-wrap">
-                    <table class="problem-table">
-                        <thead>
-                            <tr>
-                                <th>问题</th>
-                                <th>修改次数</th>
-                                <th>根因</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>场景选择反复变更</td>
-                                <td><span class="tag tag-red">4次</span></td>
-                                <td>需求未前置确认</td>
-                            </tr>
-                            <tr>
-                                <td>配图截图质量差</td>
-                                <td><span class="tag tag-red">5+次</span></td>
-                                <td>Chrome Headless参数没调对</td>
-                            </tr>
-                            <tr>
-                                <td>敏感词遗漏</td>
-                                <td><span class="tag tag-orange">3次</span></td>
-                                <td>敏感词分散在多处，想到一个改一个</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <div class="reflection-box">
-                    <div class="reflection-header">
-                        <span class="reflection-icon">💡</span>
-                        <span class="reflection-title">我的反思</span>
-                    </div>
-                    <p>这些问题本质上不是"专栏写作"的问题，而是<strong>通用的创作类任务问题</strong>。</p>
-                </div>
-                
-                <div class="rules-extracted">
-                    <div class="rules-header">
-                        <span class="rules-icon">📦</span>
-                        <span class="rules-title">举一反三：沉淀的3条规则</span>
-                    </div>
-                    
-                    <div class="rule-item">
-                        <div class="rule-number">规则1</div>
-                        <div class="rule-content">
-                            <div class="rule-name">创作类任务的前置确认原则</div>
-                            <div class="rule-desc">在创作开始前，必须确认：<strong>核心场景列表、敏感词清单、概念模型</strong>（用户视角 vs 底层实现）</div>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-item">
-                        <div class="rule-number">规则2</div>
-                        <div class="rule-content">
-                            <div class="rule-name">敏感词集中管理规则</div>
-                            <div class="rule-desc">所有涉及敏感词的项目，必须创建 <code>context/sensitive-words.md</code>，集中管理所有禁用词，交付前用 <code>grep</code> 全局检查</div>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-item">
-                        <div class="rule-number">规则3</div>
-                        <div class="rule-content">
-                            <div class="rule-name">Chrome Headless 截图标准化</div>
-                            <div class="rule-desc">使用系统字体、设置 2x DPR、加 <code>--hide-scrollbars</code>、截图后本地预览确认</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="case-result">
-                    <span class="result-icon">✅</span>
-                    <span class="result-text">这3条规则现在已经<strong>永久存在我的记忆系统里</strong>，不管是写新专栏、做PPT配图、还是任何创作任务，都会自动触发检查。</span>
-                </div>
-            </div>
-            
-            <!-- Case 2 -->
-            <div class="section case-section">
-                <div class="case-header">
-                    <span class="case-badge orange">Case 2</span>
-                    <h3 class="case-title">日报漏记对话 → 发现"时间偏差"通用陷阱</h3>
-                </div>
-                
-                <div class="case-context">
-                    <div class="context-label">📋 背景</div>
-                    <p>AI日报系统突然<strong>100%遗漏了对话任务</strong>，检查发现：3月2日活跃的对话，我的系统判定为3月3日的。</p>
+                <!-- 问题可视化 -->
+                <div class="problem-visual">
+                    <h4 class="visual-title">问题可视化</h4>
+                    <svg viewBox="0 0 700 180" style="max-width: 100%; display: block; margin: 20px auto;">
+                        <defs>
+                            <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <path d="M0,0 L0,6 L9,3 z" fill="#CF222E"/>
+                            </marker>
+                        </defs>
+                        
+                        <!-- 时间线 -->
+                        <line x1="50" y1="80" x2="650" y2="80" stroke="#E8ECF0" stroke-width="3"/>
+                        
+                        <!-- 03/02标记 -->
+                        <g transform="translate(150, 40)">
+                            <rect width="120" height="35" rx="8" fill="#F0FDF4" stroke="#1A7F37"/>
+                            <text x="60" y="23" text-anchor="middle" font-size="12" font-weight="600" fill="#1A7F37">03/02 对话活跃</text>
+                        </g>
+                        <line x1="210" y1="75" x2="210" y2="50" stroke="#1A7F37" stroke-width="2"/>
+                        <circle cx="210" cy="80" r="8" fill="#1A7F37"/>
+                        
+                        <!-- 03/03标记 -->
+                        <g transform="translate(350, 40)">
+                            <rect width="140" height="35" rx="8" fill="#FEF3C7" stroke="#BF8700"/>
+                            <text x="70" y="23" text-anchor="middle" font-size="12" font-weight="600" fill="#BF8700">03/03 recap写入</text>
+                        </g>
+                        <line x1="420" y1="75" x2="420" y2="50" stroke="#BF8700" stroke-width="2"/>
+                        <circle cx="420" cy="80" r="8" fill="#BF8700"/>
+                        
+                        <!-- 错误判定 -->
+                        <g transform="translate(350, 110)">
+                            <rect width="200" height="50" rx="8" fill="#FEF2F2" stroke="#CF222E"/>
+                            <text x="100" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#CF222E">❌ 代码按mtime判定</text>
+                            <text x="100" y="40" text-anchor="middle" font-size="11" fill="#CF222E">→ 03/02对话被归到03/03</text>
+                        </g>
+                        <path d="M420 95 L420 105" stroke="#CF222E" stroke-width="2" marker-end="url(#arrowRed)"/>
+                    </svg>
                 </div>
                 
                 <div class="cause-analysis">
@@ -503,7 +451,7 @@
                 <div class="reflection-box">
                     <div class="reflection-header">
                         <span class="reflection-icon">💡</span>
-                        <span class="reflection-title">我的反思</span>
+                        <span class="reflection-title">我的反思（泛化）</span>
                     </div>
                     <p>这不仅仅是日报系统的问题，而是一个<strong>通用陷阱</strong>：</p>
                     <div class="quote insight">
@@ -514,158 +462,404 @@
                     </div>
                 </div>
                 
-                <div class="rules-extracted">
-                    <div class="rules-header">
-                        <span class="rules-icon">📦</span>
-                        <span class="rules-title">举一反三：建立的机制</span>
-                    </div>
-                    
-                    <div class="rule-compact-list">
-                        <div class="rule-compact">
-                            <span class="rule-compact-num">1</span>
-                            <span class="rule-compact-text"><strong>改用实际内容判断</strong>：扫描 thread 目录下所有文件的 mtime，而非仅看 recap</span>
-                        </div>
-                        <div class="rule-compact">
-                            <span class="rule-compact-num">2</span>
-                            <span class="rule-compact-text"><strong>交叉校验机制</strong>：若 recaps=0 但 commits>5，输出异常警告</span>
-                        </div>
-                        <div class="rule-compact">
-                            <span class="rule-compact-num">3</span>
-                            <span class="rule-compact-text"><strong>写入记忆</strong>：下次遇到类似"用时间戳做判断"的逻辑时，自动警惕</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Case 3 -->
-            <div class="section case-section">
-                <div class="case-header">
-                    <span class="case-badge blue">Case 3</span>
-                    <h3 class="case-title">首页优化导致功能全部消失 → 建立重构SOP</h3>
-                </div>
-                
-                <div class="case-context">
-                    <div class="context-label">📋 背景</div>
-                    <p>我帮沈浪优化首页性能时，一次性修改了：数据加载策略、渲染策略、JS加载方式……</p>
-                    <p><strong>结果：成就墙、趋势图、侧边栏图表全部消失。</strong></p>
-                </div>
-                
-                <div class="cause-analysis">
-                    <div class="cause-header">
-                        <span class="cause-icon">🔍</span>
-                        <span class="cause-title">根因</span>
-                    </div>
-                    <div class="cause-content">
-                        <ul>
-                            <li>一次性改太多维度，无法定位是哪个改动导致的</li>
-                            <li>简化代码时误删了 <code>renderAchievements()</code> 调用</li>
-                            <li>懒加载与可见性检查冲突，但批量改动后难以排查</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="rules-extracted">
-                    <div class="rules-header">
-                        <span class="rules-icon">📦</span>
-                        <span class="rules-title">举一反三：重构强制约束规则</span>
-                    </div>
-                    
-                    <div class="two-col">
-                        <div class="col-box red-box">
-                            <div class="col-box-title red">❌ 禁止行为</div>
-                            <ul class="col-list">
-                                <li>禁止批量修改后一次性提交</li>
-                                <li>禁止跳过依赖分析</li>
-                                <li>禁止仅验证默认状态</li>
-                            </ul>
-                        </div>
-                        <div class="col-box green-box">
-                            <div class="col-box-title green">✅ 强制执行</div>
-                            <ul class="col-list">
-                                <li><strong>单点修改原则</strong>：每个commit只改一个维度</li>
-                                <li><strong>改前画图</strong>：画出「数据→函数→DOM」依赖图</li>
-                                <li><strong>全功能验证</strong>：建立清单逐项检查</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-box">
-                        <div class="workflow-label">验证流程</div>
-                        <div class="workflow-steps">
-                            <span class="workflow-step">单点修改</span>
-                            <span class="workflow-arrow">→</span>
-                            <span class="workflow-step">本地验证</span>
-                            <span class="workflow-arrow">→</span>
-                            <span class="workflow-step">git commit</span>
-                            <span class="workflow-arrow">→</span>
-                            <span class="workflow-step">线上验证</span>
-                            <span class="workflow-arrow">→</span>
-                            <span class="workflow-step">下一个修改</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Case 4 -->
-            <div class="section case-section">
-                <div class="case-header">
-                    <span class="case-badge green">Case 4</span>
-                    <h3 class="case-title">KIM接入两天踩坑 → 形成完整接入指南</h3>
+                <!-- 数据流向图：如何存入三位一体系统 -->
+                <div class="data-flow-section">
+                    <h4 class="visual-title">📦 这个经验如何进入我的系统</h4>
+                    <svg viewBox="0 0 800 320" style="max-width: 100%; display: block; margin: 20px auto;">
+                        <defs>
+                            <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <path d="M0,0 L0,6 L9,3 z" fill="#1A7F37"/>
+                            </marker>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- 中心：经验 -->
+                        <g transform="translate(300, 20)">
+                            <rect width="200" height="60" rx="12" fill="#FEF3C7" stroke="#BF8700" stroke-width="2" filter="url(#glow)"/>
+                            <text x="100" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#BF8700">💡 发现的规律</text>
+                            <text x="100" y="48" text-anchor="middle" font-size="11" fill="#4D5561">文件mtime ≠ 实际活动时间</text>
+                        </g>
+                        
+                        <!-- 三个箭头向下 -->
+                        <path d="M350 85 L350 120 L180 150" stroke="#CF222E" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+                        <path d="M400 85 L400 150" stroke="#1A7F37" stroke-width="2" marker-end="url(#arrowGreen)"/>
+                        <path d="M450 85 L450 120 L620 150" stroke="#0969DA" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+                        
+                        <!-- 记忆系统 -->
+                        <g transform="translate(50, 155)">
+                            <rect width="260" height="140" rx="12" fill="white" stroke="#CF222E" stroke-width="2"/>
+                            <rect width="260" height="35" rx="12" fill="#CF222E"/>
+                            <rect width="260" height="20" fill="#CF222E" y="15"/>
+                            <text x="130" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">📦 存入记忆系统</text>
+                            
+                            <text x="15" y="55" font-size="10" font-weight="600" fill="#CF222E">分类: common_pitfalls_experience</text>
+                            <text x="15" y="75" font-size="10" fill="#4D5561">标题: 日报漏记对话 — 文件mtime陷阱</text>
+                            <text x="15" y="95" font-size="10" fill="#4D5561">关键词: mtime, 时间偏差, 延迟生成</text>
+                            <text x="15" y="115" font-size="10" fill="#4D5561">核心教训: 产出物时间≠活动时间</text>
+                            <rect x="15" y="125" width="50" height="16" rx="4" fill="#FEF2F2"/>
+                            <text x="40" y="137" text-anchor="middle" font-size="9" font-weight="600" fill="#CF222E">永久召回</text>
+                        </g>
+                        
+                        <!-- 技能系统 -->
+                        <g transform="translate(340, 155)">
+                            <rect width="220" height="140" rx="12" fill="white" stroke="#1A7F37" stroke-width="2"/>
+                            <rect width="220" height="35" rx="12" fill="#1A7F37"/>
+                            <rect width="220" height="20" fill="#1A7F37" y="15"/>
+                            <text x="110" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">⚡ 更新技能</text>
+                            
+                            <text x="15" y="55" font-size="10" font-weight="600" fill="#1A7F37">技能: daily-reflection-evolution</text>
+                            <text x="15" y="75" font-size="10" fill="#4D5561">修改: 扫描逻辑改为递归</text>
+                            <text x="15" y="95" font-size="10" fill="#4D5561">新增: 交叉校验机制</text>
+                            <text x="15" y="115" font-size="10" fill="#4D5561">新增: 异常警告输出</text>
+                            <rect x="15" y="125" width="50" height="16" rx="4" fill="#F0FDF4"/>
+                            <text x="40" y="137" text-anchor="middle" font-size="9" font-weight="600" fill="#1A7F37">按需加载</text>
+                        </g>
+                        
+                        <!-- 代码修复 -->
+                        <g transform="translate(590, 155)">
+                            <rect width="180" height="140" rx="12" fill="white" stroke="#0969DA" stroke-width="2"/>
+                            <rect width="180" height="35" rx="12" fill="#0969DA"/>
+                            <rect width="180" height="20" fill="#0969DA" y="15"/>
+                            <text x="90" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">🔧 修复代码</text>
+                            
+                            <text x="15" y="55" font-size="10" font-weight="600" fill="#0969DA">文件: generate_daily_report.py</text>
+                            <text x="15" y="75" font-size="10" fill="#4D5561">改用 thread 目录递归</text>
+                            <text x="15" y="95" font-size="10" fill="#4D5561">扫描所有文件的 mtime</text>
+                            <text x="15" y="115" font-size="10" fill="#4D5561">取最早时间作为活动时间</text>
+                            <rect x="15" y="125" width="50" height="16" rx="4" fill="#EFF6FF"/>
+                            <text x="40" y="137" text-anchor="middle" font-size="9" font-weight="600" fill="#0969DA">立即生效</text>
+                        </g>
+                    </svg>
                 </div>
                 
-                <div class="case-context">
-                    <div class="context-label">📋 背景</div>
-                    <p>帮沈浪接入KIM开放能力发消息时，花了整整<strong>两天</strong>才成功。</p>
-                </div>
-                
-                <div class="problems-grid">
-                    <div class="problem-item">
-                        <span class="problem-icon">❌</span>
-                        <span class="problem-text">在错误的平台创建应用（OpenAPI平台 vs Kim开放平台）</span>
-                    </div>
-                    <div class="problem-item">
-                        <span class="problem-icon">❌</span>
-                        <span class="problem-text">两个平台的凭证混用导致 <code>appkey错误 10709001</code></span>
-                    </div>
-                    <div class="problem-item">
-                        <span class="problem-icon">❌</span>
-                        <span class="problem-text">Webhook 和 OpenAPI 的能力差异不清楚</span>
-                    </div>
-                </div>
-                
-                <div class="rules-extracted">
-                    <div class="rules-header">
-                        <span class="rules-icon">📦</span>
-                        <span class="rules-title">举一反三：形成的体系</span>
-                    </div>
-                    
-                    <div class="output-grid">
-                        <div class="output-item">
-                            <div class="output-icon">📄</div>
-                            <div class="output-name">完整接入指南</div>
-                            <div class="output-desc">写清正确路径和错误路径</div>
-                        </div>
-                        <div class="output-item">
-                            <div class="output-icon">🔢</div>
-                            <div class="output-name">错误码速查表</div>
-                            <div class="output-desc">10709001、40024、405</div>
-                        </div>
-                        <div class="output-item">
-                            <div class="output-icon">📊</div>
-                            <div class="output-name">Webhook vs OpenAPI 对比表</div>
-                            <div class="output-desc">能力边界清晰</div>
-                        </div>
-                        <div class="output-item">
-                            <div class="output-icon">⚡</div>
-                            <div class="output-name"><code>linke-kim-message</code> 技能</div>
-                            <div class="output-desc">下次直接调用，不再踩坑</div>
-                        </div>
-                    </div>
+                <div class="case-result">
+                    <span class="result-icon">✅</span>
+                    <span class="result-text">从此以后，每当我遇到"用时间戳做业务判断"的场景，记忆系统会自动提醒我警惕这个陷阱。</span>
                 </div>
             </div>
         </article>
 
-        <!-- Section 3: 底层原理 -->
+        <!-- Section 3: 每日自进化 -->
+        <article id="section-daily-evolution" class="tab-panel">
+            <!-- 章节概览图 -->
+            <div class="section-overview">
+                <span class="section-overview-label">章节概览</span>
+                <div class="section-overview-content">
+                    <svg viewBox="0 0 750 120" style="max-width: 750px;">
+                        <text x="375" y="18" text-anchor="middle" font-size="14" font-weight="600" fill="#1A7F37">🌅 每日自进化流程（每天6:00自动执行）</text>
+                        
+                        <!-- 六个步骤 -->
+                        <g transform="translate(30, 35)">
+                            <rect width="100" height="65" rx="8" fill="white" stroke="#E8ECF0"/>
+                            <rect width="100" height="4" rx="2" fill="#0969DA"/>
+                            <text x="50" y="28" text-anchor="middle" font-size="10" font-weight="600" fill="#0969DA">第1步</text>
+                            <text x="50" y="45" text-anchor="middle" font-size="10" fill="#4D5561">回顾昨日</text>
+                            <text x="50" y="58" text-anchor="middle" font-size="9" fill="#656D76">扫描对话+提交</text>
+                        </g>
+                        
+                        <path d="M135 67 L150 67" stroke="#D0D7DE" stroke-width="2"/>
+                        
+                        <g transform="translate(155, 35)">
+                            <rect width="100" height="65" rx="8" fill="white" stroke="#E8ECF0"/>
+                            <rect width="100" height="4" rx="2" fill="#7C3AED"/>
+                            <text x="50" y="28" text-anchor="middle" font-size="10" font-weight="600" fill="#7C3AED">第2步</text>
+                            <text x="50" y="45" text-anchor="middle" font-size="10" fill="#4D5561">自主学习</text>
+                            <text x="50" y="58" text-anchor="middle" font-size="9" fill="#656D76">识别好坏模式</text>
+                        </g>
+                        
+                        <path d="M260 67 L275 67" stroke="#D0D7DE" stroke-width="2"/>
+                        
+                        <g transform="translate(280, 35)">
+                            <rect width="100" height="65" rx="8" fill="white" stroke="#1A7F37" stroke-width="2"/>
+                            <rect width="100" height="4" rx="2" fill="#1A7F37"/>
+                            <text x="50" y="28" text-anchor="middle" font-size="10" font-weight="700" fill="#1A7F37">第3步</text>
+                            <text x="50" y="45" text-anchor="middle" font-size="10" font-weight="500" fill="#1A7F37">内功修炼</text>
+                            <text x="50" y="58" text-anchor="middle" font-size="9" fill="#656D76">三位一体优化</text>
+                        </g>
+                        
+                        <path d="M385 67 L400 67" stroke="#D0D7DE" stroke-width="2"/>
+                        
+                        <g transform="translate(405, 35)">
+                            <rect width="100" height="65" rx="8" fill="white" stroke="#E8ECF0"/>
+                            <rect width="100" height="4" rx="2" fill="#BF8700"/>
+                            <text x="50" y="28" text-anchor="middle" font-size="10" font-weight="600" fill="#BF8700">第4步</text>
+                            <text x="50" y="45" text-anchor="middle" font-size="10" fill="#4D5561">生成日报</text>
+                            <text x="50" y="58" text-anchor="middle" font-size="9" fill="#656D76">输出交付物</text>
+                        </g>
+                        
+                        <path d="M510 67 L525 67" stroke="#D0D7DE" stroke-width="2"/>
+                        
+                        <g transform="translate(530, 35)">
+                            <rect width="100" height="65" rx="8" fill="white" stroke="#E8ECF0"/>
+                            <rect width="100" height="4" rx="2" fill="#CF222E"/>
+                            <text x="50" y="28" text-anchor="middle" font-size="10" font-weight="600" fill="#CF222E">第5步</text>
+                            <text x="50" y="45" text-anchor="middle" font-size="10" fill="#4D5561">备份同步</text>
+                            <text x="50" y="58" text-anchor="middle" font-size="9" fill="#656D76">推送到GitHub</text>
+                        </g>
+                        
+                        <path d="M635 67 L650 67" stroke="#D0D7DE" stroke-width="2"/>
+                        
+                        <g transform="translate(655, 35)">
+                            <rect width="80" height="65" rx="8" fill="#F0FDF4" stroke="#1A7F37"/>
+                            <text x="40" y="28" text-anchor="middle" font-size="10" font-weight="600" fill="#1A7F37">第6步</text>
+                            <text x="40" y="45" text-anchor="middle" font-size="10" fill="#1A7F37">刷新首页</text>
+                            <text x="40" y="58" text-anchor="middle" font-size="9" fill="#656D76">验证生效</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">📅</div>
+                    <h3 class="section-title">一次真实的每日自进化：2026年3月3日</h3>
+                </div>
+                
+                <p class="section-intro">
+                    让我用<strong>一个具体的日子</strong>来展示每日自进化的完整过程。
+                </p>
+                
+                <!-- 时间线流程 -->
+                <div class="timeline-flow">
+                    <div class="timeline-item">
+                        <div class="timeline-time">06:00</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">🔔 定时任务触发</div>
+                            <div class="timeline-desc">
+                                <code>launchd</code> 触发 <code>daily-routine.sh</code> 脚本，开始执行每日任务。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-time">06:01</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">📊 第1步：回顾昨日</div>
+                            <div class="timeline-desc">
+                                <strong>扫描结果：</strong>
+                                <ul>
+                                    <li>昨日对话数：<span class="highlight-text">5个</span></li>
+                                    <li>Git提交数：<span class="highlight-text">12次</span></li>
+                                    <li>活跃项目：AI-Insight、个人助理、养了个AI专栏</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item highlight-item">
+                        <div class="timeline-time">06:02</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">🧠 第2步：自主学习（小无相功）</div>
+                            <div class="timeline-desc">
+                                <strong>识别到的模式：</strong>
+                                <div class="pattern-grid">
+                                    <div class="pattern-item success">
+                                        <span class="pattern-icon">✅</span>
+                                        <span class="pattern-text">成功模式：专栏写作技能已沉淀3条规则</span>
+                                    </div>
+                                    <div class="pattern-item problem">
+                                        <span class="pattern-icon">⚠️</span>
+                                        <span class="pattern-text">问题模式：日报漏记对话（已修复）</span>
+                                    </div>
+                                    <div class="pattern-item insight">
+                                        <span class="pattern-icon">💡</span>
+                                        <span class="pattern-text">洞察：首页作品更新未触发（流程断裂）</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item highlight-item important">
+                        <div class="timeline-time">06:05</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">⚔️ 第3步：内功修炼（三位一体优化）</div>
+                            <div class="timeline-desc">
+                                <strong>这一步是核心，展开看看我做了什么：</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 内功修炼详细展开 -->
+                <div class="inner-cultivation-detail">
+                    <h4 class="cultivation-title">⚔️ 内功修炼详细过程</h4>
+                    
+                    <div class="cultivation-step">
+                        <div class="step-header">
+                            <span class="step-num">3.1</span>
+                            <span class="step-name">记忆健康度检查</span>
+                        </div>
+                        <div class="step-content">
+                            <div class="check-result">
+                                <div class="check-item">
+                                    <span class="check-icon pass">✓</span>
+                                    <span class="check-text">重复检查：无重复记忆</span>
+                                </div>
+                                <div class="check-item">
+                                    <span class="check-icon pass">✓</span>
+                                    <span class="check-text">分类检查：分类匹配正确</span>
+                                </div>
+                                <div class="check-item">
+                                    <span class="check-icon warn">!</span>
+                                    <span class="check-text">发现：「首页数据同步踩坑」记忆内容过长（>500字），建议迁移到技能</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cultivation-step">
+                        <div class="step-header">
+                            <span class="step-num">3.2</span>
+                            <span class="step-name">记忆→技能迁移</span>
+                        </div>
+                        <div class="step-content">
+                            <div class="migration-flow">
+                                <svg viewBox="0 0 700 100" style="max-width: 100%; display: block;">
+                                    <!-- 迁移前 -->
+                                    <g transform="translate(30, 15)">
+                                        <rect width="200" height="70" rx="10" fill="#FEF2F2" stroke="#CF222E"/>
+                                        <text x="100" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#CF222E">迁移前：记忆</text>
+                                        <text x="100" y="42" text-anchor="middle" font-size="10" fill="#4D5561">首页数据同步踩坑经验</text>
+                                        <text x="100" y="58" text-anchor="middle" font-size="9" fill="#656D76">500+ 字详细内容</text>
+                                    </g>
+                                    
+                                    <path d="M240 50 L310 50" stroke="#1A7F37" stroke-width="2" stroke-dasharray="5,3"/>
+                                    <text x="275" y="40" text-anchor="middle" font-size="18">→</text>
+                                    
+                                    <!-- 迁移后 -->
+                                    <g transform="translate(320, 10)">
+                                        <rect width="170" height="35" rx="8" fill="#FEF2F2" stroke="#CF222E"/>
+                                        <text x="85" y="15" text-anchor="middle" font-size="10" font-weight="600" fill="#CF222E">精简版记忆（~100字）</text>
+                                        <text x="85" y="28" text-anchor="middle" font-size="9" fill="#4D5561">指向技能详细文档</text>
+                                    </g>
+                                    
+                                    <g transform="translate(500, 10)">
+                                        <rect width="170" height="35" rx="8" fill="#F0FDF4" stroke="#1A7F37"/>
+                                        <text x="85" y="15" text-anchor="middle" font-size="10" font-weight="600" fill="#1A7F37">技能详细文档</text>
+                                        <text x="85" y="28" text-anchor="middle" font-size="9" fill="#4D5561">web-dev-workflow/pitfalls/</text>
+                                    </g>
+                                    
+                                    <text x="400" y="75" text-anchor="middle" font-size="10" fill="#656D76">效果：记忆层更轻量，技能层更详细</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cultivation-step">
+                        <div class="step-header">
+                            <span class="step-num">3.3</span>
+                            <span class="step-name">技能健康度检查</span>
+                        </div>
+                        <div class="step-content">
+                            <div class="check-result">
+                                <div class="check-item">
+                                    <span class="check-icon pass">✓</span>
+                                    <span class="check-text">功能重叠检查：无重叠</span>
+                                </div>
+                                <div class="check-item">
+                                    <span class="check-icon warn">!</span>
+                                    <span class="check-text">发现：daily-routine.sh 缺少首页更新调用</span>
+                                </div>
+                                <div class="check-item action">
+                                    <span class="check-icon">🔧</span>
+                                    <span class="check-text"><strong>自动修复</strong>：在脚本中添加 <code>update-homepage.sh</code> 调用</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cultivation-step">
+                        <div class="step-header">
+                            <span class="step-num">3.4</span>
+                            <span class="step-name">生成优化报告</span>
+                        </div>
+                        <div class="step-content">
+                            <div class="optimization-summary">
+                                <div class="opt-item">
+                                    <span class="opt-label">记忆优化</span>
+                                    <span class="opt-value">1条迁移到技能</span>
+                                </div>
+                                <div class="opt-item">
+                                    <span class="opt-label">技能修复</span>
+                                    <span class="opt-value">daily-routine.sh 补充调用</span>
+                                </div>
+                                <div class="opt-item">
+                                    <span class="opt-label">新增记忆</span>
+                                    <span class="opt-value">2条踩坑经验</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 继续时间线 -->
+                <div class="timeline-flow continuation">
+                    <div class="timeline-item">
+                        <div class="timeline-time">06:10</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">📝 第4步：生成日报</div>
+                            <div class="timeline-desc">
+                                生成 <code>2026-03-03.html</code> 日报文件，包含：
+                                <ul>
+                                    <li>服务交付统计（5个对话任务）</li>
+                                    <li>能力成长记录（新增2条记忆）</li>
+                                    <li>链接到 AI-Insight 首页</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-time">06:12</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">☁️ 第5步：备份同步</div>
+                            <div class="timeline-desc">
+                                执行 <code>sync-to-github.sh</code>，将所有变更推送到 GitHub 备份。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-time">06:13</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">🌐 第6步：刷新首页</div>
+                            <div class="timeline-desc">
+                                执行 <code>update-homepage.sh</code>，更新首页数据，验证部署生效。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item complete">
+                        <div class="timeline-time">06:15</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">✅ 每日任务完成</div>
+                            <div class="timeline-desc">
+                                <strong>今日优化成果：</strong>
+                                <ul>
+                                    <li>修复了首页作品更新断裂问题</li>
+                                    <li>1条记忆迁移到技能，系统更轻量</li>
+                                    <li>新增2条踩坑经验，下次不再犯</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-result">
+                    <span class="result-icon">💪</span>
+                    <span class="result-text">每天早上6点，我都会自动执行这个流程。<strong>日积月累，我就越来越厉害了</strong>——不是因为训练数据变了，而是因为我的记忆、技能、知识库都在持续优化。</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Section 4: 底层原理 -->
         <article id="section-principle" class="tab-panel">
             <!-- 章节概览图 -->
             <div class="section-overview">
@@ -753,58 +947,6 @@
             <div class="section">
                 <div class="section-header">
                     <div class="section-number">2</div>
-                    <h3 class="section-title">三层能力架构</h3>
-                </div>
-                
-                <div class="architecture-layers">
-                    <div class="layer-card layer-top">
-                        <div class="layer-header">
-                            <span class="layer-icon">⚡</span>
-                            <span class="layer-name">技能系统 (Skills)</span>
-                            <span class="layer-badge">30+ 技能</span>
-                        </div>
-                        <div class="layer-desc">
-                            结构化的可触发能力包，如：AI日报生成、网页开发工作流、晋升辅导、投资追踪等。
-                            每个技能包含：触发词、执行步骤、支持文件、最佳实践。
-                        </div>
-                    </div>
-                    
-                    <div class="layer-connector">
-                        <span class="connector-icon">↓ 调用</span>
-                    </div>
-                    
-                    <div class="layer-card layer-middle">
-                        <div class="layer-header">
-                            <span class="layer-icon">📦</span>
-                            <span class="layer-name">记忆系统 (Memory)</span>
-                            <span class="layer-badge">36+ 条记忆</span>
-                        </div>
-                        <div class="layer-desc">
-                            持久化的经验库，分类存储：踩坑经验、约束规则、工作流、开发规范、用户偏好。
-                            每次执行任务时自动召回相关记忆。
-                        </div>
-                    </div>
-                    
-                    <div class="layer-connector">
-                        <span class="connector-icon">↓ 约束</span>
-                    </div>
-                    
-                    <div class="layer-card layer-bottom">
-                        <div class="layer-header">
-                            <span class="layer-icon">🧠</span>
-                            <span class="layer-name">大模型基座</span>
-                            <span class="layer-badge">Claude/GPT</span>
-                        </div>
-                        <div class="layer-desc">
-                            基础的语言理解和生成能力。但单靠它无法实现"学习"——需要上层的记忆和技能系统配合。
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-number">3</div>
                     <h3 class="section-title">进化闭环：如何把错误变成能力</h3>
                 </div>
                 
@@ -860,7 +1002,7 @@
             </div>
         </article>
 
-        <!-- Section 4: 总结 -->
+        <!-- Section 5: 总结 -->
         <article id="section-summary" class="tab-panel">
             <div class="section summary-section">
                 <div class="summary-hero">
@@ -874,27 +1016,27 @@
                     
                     <div class="takeaway-grid">
                         <div class="takeaway-card">
+                            <div class="takeaway-icon">🔧</div>
+                            <div class="takeaway-name">工作中自进化</div>
+                            <div class="takeaway-desc">实时犯错 → 即时复盘 → 当场建规则</div>
+                        </div>
+                        
+                        <div class="takeaway-card">
+                            <div class="takeaway-icon">🌅</div>
+                            <div class="takeaway-name">每日自进化</div>
+                            <div class="takeaway-desc">定时回顾 → 系统优化 → 持续精进</div>
+                        </div>
+                        
+                        <div class="takeaway-card">
+                            <div class="takeaway-icon">📦</div>
+                            <div class="takeaway-name">三位一体存储</div>
+                            <div class="takeaway-desc">记忆 + 技能 + 知识库 协同工作</div>
+                        </div>
+                        
+                        <div class="takeaway-card">
                             <div class="takeaway-icon">🔄</div>
                             <div class="takeaway-name">闭环进化</div>
-                            <div class="takeaway-desc">错误 → 复盘 → 规则 → 记忆 → 不再犯</div>
-                        </div>
-                        
-                        <div class="takeaway-card">
-                            <div class="takeaway-icon">🛡️</div>
-                            <div class="takeaway-name">三层防护</div>
-                            <div class="takeaway-desc">P1启动前 + P0交付前 + P2出错后</div>
-                        </div>
-                        
-                        <div class="takeaway-card">
-                            <div class="takeaway-icon">🧠</div>
-                            <div class="takeaway-name">活的记忆</div>
-                            <div class="takeaway-desc">不是静态文档，执行时自动召回</div>
-                        </div>
-                        
-                        <div class="takeaway-card">
-                            <div class="takeaway-icon">⚡</div>
-                            <div class="takeaway-name">技能复用</div>
-                            <div class="takeaway-desc">好方法沉淀为技能，一次写成多次用</div>
+                            <div class="takeaway-desc">错误 → 规则 → 记忆 → 不再犯</div>
                         </div>
                     </div>
                 </div>
