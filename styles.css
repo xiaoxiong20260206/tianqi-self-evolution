@@ -1893,6 +1893,47 @@ td code {
     overflow-x: auto;
 }
 
+/* ============ 触发来源标签 ============ */
+.trigger-source {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--body-small);
+}
+
+.trigger-source.user-feedback {
+    background: linear-gradient(135deg, rgba(9, 105, 218, 0.08) 0%, rgba(9, 105, 218, 0.04) 100%);
+    border: 1px solid rgba(9, 105, 218, 0.2);
+}
+
+.trigger-source.self-discovered {
+    background: linear-gradient(135deg, rgba(26, 127, 55, 0.08) 0%, rgba(26, 127, 55, 0.04) 100%);
+    border: 1px solid rgba(26, 127, 55, 0.2);
+}
+
+.trigger-icon {
+    font-size: 16px;
+}
+
+.trigger-text {
+    color: var(--color-text-secondary);
+}
+
+.trigger-text strong {
+    color: var(--color-text-primary);
+}
+
+.trigger-source.user-feedback .trigger-text strong {
+    color: var(--color-info);
+}
+
+.trigger-source.self-discovered .trigger-text strong {
+    color: var(--color-success);
+}
+
 /* ============ 详细案例 ============ */
 .detailed-case {
     border-left-color: var(--color-warning);
