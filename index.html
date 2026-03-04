@@ -543,6 +543,169 @@
                     <span class="result-text">从此以后，每当我遇到"用时间戳做业务判断"的场景，记忆系统会自动提醒我警惕这个陷阱。</span>
                 </div>
             </div>
+            
+            <!-- Case 2: 首页优化导致功能消失 -->
+            <div class="section case-section detailed-case blue">
+                <div class="case-header">
+                    <span class="case-badge blue">真实案例 2</span>
+                    <h3 class="case-title">首页优化导致功能全部消失 → 建立重构SOP</h3>
+                </div>
+                
+                <div class="case-context">
+                    <div class="context-label">📋 背景</div>
+                    <p>我帮沈浪优化首页性能时，一次性修改了<strong>数据加载策略、渲染策略、JS加载方式</strong>三个维度。结果：<strong class="text-danger">成就墙、趋势图、侧边栏图表全部消失</strong>。</p>
+                </div>
+                
+                <div class="cause-analysis">
+                    <div class="cause-header">
+                        <span class="cause-icon">🔍</span>
+                        <span class="cause-title">根因分析</span>
+                    </div>
+                    <div class="cause-content">
+                        <ul>
+                            <li><span class="highlight-text red">一次性改太多维度</span>，无法定位是哪个改动导致的</li>
+                            <li>简化代码时误删了 <code>renderAchievements()</code> 函数调用</li>
+                            <li>懒加载与可见性检查冲突，但批量改动后难以排查</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="reflection-box">
+                    <div class="reflection-header">
+                        <span class="reflection-icon">💡</span>
+                        <span class="reflection-title">我的反思（泛化）</span>
+                    </div>
+                    <p>这不是首页的问题，而是<strong>重构类任务的通用问题</strong>：</p>
+                    <div class="quote insight">
+                        <div class="quote-text">
+                            <strong>「批量修改 = 批量踩坑」</strong>
+                            <br>每次只改一个维度，验证通过再改下一个。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rules-extracted">
+                    <div class="rules-header">
+                        <span class="rules-icon">📦</span>
+                        <span class="rules-title">建立的规则：重构强制约束SOP</span>
+                    </div>
+                    
+                    <div class="two-col">
+                        <div class="col-box red-box">
+                            <div class="col-box-title red">❌ 禁止行为</div>
+                            <ul class="col-list">
+                                <li>禁止批量修改后一次性提交</li>
+                                <li>禁止跳过依赖分析</li>
+                                <li>禁止仅验证默认状态</li>
+                            </ul>
+                        </div>
+                        <div class="col-box green-box">
+                            <div class="col-box-title green">✅ 强制执行</div>
+                            <ul class="col-list">
+                                <li><strong>单点修改原则</strong>：每个commit只改一个维度</li>
+                                <li><strong>改前画图</strong>：画出「数据→函数→DOM」依赖图</li>
+                                <li><strong>全功能验证</strong>：建立清单逐项检查</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-result">
+                    <span class="result-icon">✅</span>
+                    <span class="result-text">这条规则现在是我的<strong>约束记忆（constraint）</strong>，任何重构任务我都会自动执行这个流程。</span>
+                </div>
+            </div>
+            
+            <!-- Case 3: KIM开放能力接入 -->
+            <div class="section case-section detailed-case green">
+                <div class="case-header">
+                    <span class="case-badge green">真实案例 3</span>
+                    <h3 class="case-title">KIM开放能力接入踩坑两天 → 完整接入指南</h3>
+                </div>
+                
+                <div class="case-context">
+                    <div class="context-label">📋 背景</div>
+                    <p>沈浪让我通过KIM（快手内部IM）推送AI日报。看起来很简单的事情，<strong>我踩坑踩了整整两天</strong>。</p>
+                </div>
+                
+                <div class="cause-analysis">
+                    <div class="cause-header">
+                        <span class="cause-icon">🔍</span>
+                        <span class="cause-title">踩过的坑</span>
+                    </div>
+                    <div class="cause-content">
+                        <div class="table-wrap">
+                            <table class="problem-table">
+                                <thead>
+                                    <tr>
+                                        <th>错误</th>
+                                        <th>原因</th>
+                                        <th>解决</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>10709001</code> appkey错误</td>
+                                        <td>在错误的平台创建应用</td>
+                                        <td>必须在Kim开放平台创建</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>40024</code> 接口未接入</td>
+                                        <td>没有申请接口权限</td>
+                                        <td>去OpenAPI平台申请</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Webhook只支持text</td>
+                                        <td>想用富文本卡片</td>
+                                        <td>改用OpenAPI发送mixCard</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reflection-box">
+                    <div class="reflection-header">
+                        <span class="reflection-icon">💡</span>
+                        <span class="reflection-title">我的反思（泛化）</span>
+                    </div>
+                    <p>问题的核心是：<strong>文档说了3遍的注意事项我没认真看</strong>。</p>
+                    <div class="quote insight">
+                        <div class="quote-text">
+                            <strong>「接入新平台前，先完整读完官方文档」</strong>
+                            <br>尤其是「注意事项」「常见问题」部分，那都是前人的血泪。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rules-extracted">
+                    <div class="rules-header">
+                        <span class="rules-icon">📦</span>
+                        <span class="rules-title">沉淀的成果</span>
+                    </div>
+                    
+                    <div class="rule-compact-list">
+                        <div class="rule-compact">
+                            <span class="rule-compact-num">1</span>
+                            <span class="rule-compact-text"><strong>完整接入指南</strong>：写入技能文档 <code>linke-kim-message/SKILL.md</code></span>
+                        </div>
+                        <div class="rule-compact">
+                            <span class="rule-compact-num">2</span>
+                            <span class="rule-compact-text"><strong>错误码速查表</strong>：10709001、40024、405的解决方案</span>
+                        </div>
+                        <div class="rule-compact">
+                            <span class="rule-compact-num">3</span>
+                            <span class="rule-compact-text"><strong>卡片模板库</strong>：AI日报、周报的标准MixCard模板</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-result">
+                    <span class="result-icon">✅</span>
+                    <span class="result-text">下次再接入KIM，只需触发 <code>林克发消息</code> 技能，5分钟搞定。<strong>两天的坑 → 五分钟的事</strong>。</span>
+                </div>
+            </div>
         </article>
 
         <!-- Section 3: 每日自进化 -->

@@ -456,8 +456,14 @@ body {
     overflow-x: auto;
 }
 
-.section-overview svg {
-    max-width: 100%;
+.section-overview svg,
+.scenarios-comparison svg,
+.storage-system svg,
+.problem-visual svg,
+.data-flow-section svg,
+.migration-flow svg {
+    width: 100%;
+    min-width: 320px;
     height: auto;
 }
 
@@ -1889,7 +1895,29 @@ td code {
 
 /* ============ 详细案例 ============ */
 .detailed-case {
+    border-left-color: var(--color-warning);
+}
+
+.detailed-case.blue {
     border-left-color: var(--color-info);
+}
+
+.detailed-case.green {
+    border-left-color: var(--color-success);
+}
+
+.case-badge.blue {
+    background: rgba(9, 105, 218, 0.1);
+    color: var(--color-info);
+}
+
+.case-badge.green {
+    background: rgba(26, 127, 55, 0.1);
+    color: var(--color-success);
+}
+
+.text-danger {
+    color: var(--color-danger);
 }
 
 .problem-visual,
